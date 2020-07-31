@@ -1,0 +1,15 @@
+---
+# https://github.com/jetstack/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
+prometheus:
+  enabled: true
+  servicemonitor:
+    enabled: true
+    prometheusInstance: default
+    targetPort: 9402
+    path: /metrics
+    interval: 60s
+    scrapeTimeout: 30s
+    labels:
+      prometheus: cluster-monitoring
+nodeSelector:
+  "beta.kubernetes.io/arch": "amd64"

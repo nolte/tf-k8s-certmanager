@@ -1,0 +1,37 @@
+_extends: plumbing
+
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+
+  # The name of the repository. Changing this will rename the repository
+  name: tf-k8s-certmanager
+
+  # A short description of the repository that will show up on GitHub
+  description: Terraform K8s Certsmanager Modules
+
+  # A URL with more information about the repository
+  homepage: https://nolte.github.io/tf-k8s-certmanager
+
+  # A comma-separated list of topics to set on the repository
+  topics: terraform, terraform-module, certmanager, k8s
+
+branches:
+  - name: develop
+    protection:
+      # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
+      required_pull_request_reviews: null
+      #  # The number of approvals required. (1-6)
+      #  required_approving_review_count: 1
+      #  # Dismiss approved reviews automatically when a new commit is pushed.
+      #  dismiss_stale_reviews: true
+      #  # Blocks merge until code owners have reviewed.
+      #  require_code_owner_reviews: true
+      # Required. Require status checks to pass before merging. Set to null to disable
+      required_status_checks:
+        # Required. Require branches to be up to date before merging.
+        strict: true
+        # Required. The list of status checks to require in order to merge into this branch
+        contexts:
+          - cicd
+      restrictions: null
