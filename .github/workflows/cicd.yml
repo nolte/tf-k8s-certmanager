@@ -20,7 +20,7 @@ jobs:
           echo "hallo 2"
 
       - name: EditorConfig-Action
-        uses: greut/eclint-action@v0
+        uses: greut/eclint-action@v0.2.5
 
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v1
