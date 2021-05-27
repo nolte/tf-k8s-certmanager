@@ -23,6 +23,6 @@ jobs:
         uses: greut/eclint-action@v0.2.5
 
       - name: yaml-lint
-        uses: ibiqlik/action-yamllint@v1
+        uses: ibiqlik/action-yamllint@v3.0.2
         with:
           config_file: .yamllint.yml
