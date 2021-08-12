@@ -3,6 +3,6 @@ module github.com/nolte/tf-k8s-certmanager
 go 1.14
 
 require (
-	github.com/gruntwork-io/terratest v0.28.12
-	github.com/stretchr/testify v1.6.1
+	github.com/gruntwork-io/terratest v0.37.5
+	github.com/stretchr/testify v1.6.1 // indirect
 )
